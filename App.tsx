@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Wellcome } from './src/screens/Wellcome';
+import { UserIdentification } from './src/screens/UserIdentification';
+//import { View, ActivityIndicator } from 'react-native';
+// import { useFonts, Jost_400Regular, Jost_600SemiBold } from '@expo-google-fonts/jost'
+import colors from './styles/colors';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <Wellcome />
+    <UserIdentification />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
