@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView, Text, Image, StyleSheet, Dimensions, View } from 'react-native';
 
 import colors from '../../styles/colors';
@@ -6,6 +7,12 @@ import wateringImg from '../assets/watering.png'
 import { Button } from '../components/Button';
 
 export function Wellcome() {
+  const { navigate } = useNavigation();
+
+  function handleStart() {
+    navigate('UserIdentification');
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
@@ -28,6 +35,7 @@ export function Wellcome() {
           icon="chevron-right"
           color={colors.white}
           size={32}
+          onPress={handleStart}
         />
       </View>
 

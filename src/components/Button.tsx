@@ -10,11 +10,12 @@ type Props = TouchableOpacityProps & {
   size?: number;
 }
 
-export function Button({ title, widthNumber, icon, size, color }: Props) {
+export function Button({ title, widthNumber, icon, size, color, ...rest }: Props) {
   return (
     <TouchableOpacity
       style={[styles.button, { width: widthNumber }]}
       activeOpacity={0.7}
+      {...rest}
     >
       <Text style={styles.buttonText}>
         {title}<Feather name={icon} size={size} color={color} />
