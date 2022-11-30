@@ -20,7 +20,6 @@ export function UserIdentification() {
     setIsFilled(!!value);
     setName(value)
   }
-  //55 min vd 2
 
   return (
     <SafeAreaView style={styles.container}>
